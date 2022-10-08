@@ -1,0 +1,25 @@
+.table-container {
+    display: grid;
+    place-items: center;   
+}
+
+/* .table-tittle {
+    position: relative;
+} */
+
+.table-content input {
+    border: 1px solid;
+    border-radius: 20px;  
+}
+
+.button-container {
+    display: grid;
+    place-items: center;
+}
+
+.button-container button {
+    width: 10%;
+    border: 1px;
+    border-radius: 8px;
+    cursor: pointer;
+}
