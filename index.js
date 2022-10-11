@@ -1,36 +1,42 @@
-// const buttonSelector = document.querySelector('.action');
-// const buttonEvent = addEventListener('click');
+const infoContainer = document.querySelector('.info-container');
+const buttom = document.querySelector('#buttom');
 
-const rowContainer = document.querySelector('.table-container');
+function info (value1, value2) {
+  this.value1 = value1;
+  this.value2 = value2;
+}
 
-function displayInfo() {
-    // <tr class="table-content">
-    //             <td><input type="text" name="name" id="name"></td>
-    //             <td><input type="text" name="lastname" id="lastname"></td>
-    //         </tr>
-    
-    const newRow = document.createElement('tr');
-    newRow.setAttribute('class', 'table-content');
-    
-    const nameTd = document.createElement('td');
-    const nameInput = document.createElement('input');
-    // nameInput.setAttribute('type', 'text', 'name', 'name', 'id', 'name');
-    nameInput.setAttribute('type', 'text',);
-    nameInput.setAttribute('name', 'name',);
-    nameInput.setAttribute('id', 'name');
+function buttomSave() {
+  buttom.addEventListener('click',
+    function save(value) {
+      value = document.querySelector('#info').value; 
+      info.value1 = value;
+      buttom.classList.remove('save');
+      buttom.classList.add('show');
+      // buttom.classList.toggle('show')
+      console.log('Todo bien con el save vro')
+    }
+  );
+}
 
-    const lastnameTd = document.createElement('td');
-    const lastnameInput = document.createElement('input');
-    // lastnameInput.setAttribute('type', 'text', 'name', 'name', 'id', 'name');
-    lastnameInput.setAttribute('type', 'text');
-    lastnameInput.setAttribute('name', 'name');
-    lastnameInput.setAttribute('id', 'name');
+function buttomShow() {
+  buttom.addEventListener('click',
+    function show(value) {
+      value = document.querySelector('#info').value;
+      info.value2 = value;
+      // console.log(info.value1, info.value2);
+      buttom.classList.remove('show');
+      buttom.classList.add('save');
+      // buttom.classList.toggle('save')
+      console.log('Todo bien con el show vro')
+    }
+  );
+}
 
-    rowContainer.appendChild(newRow);
-    newRow.appendChild(nameTd, lastnameTd);
-    nameTd.appendChild(nameInput);
-    lastnameTd.append(lastnameInput);
-};
-
-displayInfo();
-
+if (buttom.classList == 'save') {
+  buttomSave();
+} else if (buttom.classList == 'show') {
+  buttomShow();
+} else {
+  console.log('Fuap!')
+}
