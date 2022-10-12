@@ -25,3 +25,7 @@
     display: grid;
     place-items: center;   
 }
+
+.info-container {
+    display: grid;
+}
