@@ -6,37 +6,39 @@ function info (value1, value2) {
   this.value2 = value2;
 }
 
-function buttomSave() {
-  buttom.addEventListener('click',
-    function save(value) {
-      value = document.querySelector('#info').value; 
-      info.value1 = value;
-      buttom.classList.remove('save');
-      buttom.classList.add('show');
-      // buttom.classList.toggle('show')
-      console.log('Todo bien con el save vro')
-    }
-  );
+const whatClassIs = () => {
+  if (buttom.classList.contains('save')) {
+    return true
+  }  else {
+    return false
+  }
 }
 
-function buttomShow() {
-  buttom.addEventListener('click',
-    function show(value) {
-      value = document.querySelector('#info').value;
-      info.value2 = value;
-      // console.log(info.value1, info.value2);
-      buttom.classList.remove('show');
-      buttom.classList.add('save');
-      // buttom.classList.toggle('save')
-      console.log('Todo bien con el show vro')
-    }
-  );
+const timeToSave = () => {
+  let value = document.querySelector('#info').value; 
+  info.value1 = value;
+  buttom.classList.remove('save');
+  buttom.classList.add('show');
 }
 
-if (buttom.classList == 'save') {
-  buttomSave();
-} else if (buttom.classList == 'show') {
-  buttomShow();
-} else {
-  console.log('Fuap!')
+const timeToShow = () => {
+  let value = document.querySelector('#info').value;
+  info.value2 = value;
+
+  let td = document.createElement('td');
+  td.innerText = `${info.value1} - ${info.value2}`;
+  infoContainer.appendChild(td);
+
+  buttom.classList.remove('show');
+  buttom.classList.add('save');
+}
+
+const clickMe = () => {
+  let result = whatClassIs();
+
+  if (result) {
+    timeToSave();
+  } else {
+    timeToShow();
+  }
 }
