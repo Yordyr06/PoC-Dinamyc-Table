@@ -1,4 +1,5 @@
-const infoContainer = document.querySelector('.info-container');
+const firstColumn = document.querySelector('.first-column');
+const secondColumn = document.querySelector('.second-column');
 const buttom = document.querySelector('#buttom');
 
 function info (value1, value2) {
@@ -6,7 +7,7 @@ function info (value1, value2) {
   this.value2 = value2;
 }
 
-const whatClassIs = () => {
+const whatClassIsIt = () => {
   if (buttom.classList.contains('save')) {
     return true
   }  else {
@@ -17,24 +18,32 @@ const whatClassIs = () => {
 const timeToSave = () => {
   let value = document.querySelector('#info').value; 
   info.value1 = value;
+
   buttom.classList.remove('save');
   buttom.classList.add('show');
+
+  document.querySelector('#info').value = '';
 }
 
 const timeToShow = () => {
   let value = document.querySelector('#info').value;
   info.value2 = value;
 
-  let td = document.createElement('td');
-  td.innerText = `${info.value1} - ${info.value2}`;
-  infoContainer.appendChild(td);
+  let firstValue = document.createElement('div');
+  let secondValue = document.createElement('div');
+  firstValue.innerText = `${info.value1}`;
+  secondValue.innerText = `${info.value2}`;
+  firstColumn.appendChild(firstValue);
+  secondColumn.appendChild(secondValue);
 
   buttom.classList.remove('show');
   buttom.classList.add('save');
+  
+  document.querySelector('#info').value = '';
 }
 
 const clickMe = () => {
-  let result = whatClassIs();
+  let result = whatClassIsIt();
 
   if (result) {
     timeToSave();

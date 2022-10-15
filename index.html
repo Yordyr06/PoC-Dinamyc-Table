@@ -7,30 +7,32 @@
 
     <link rel="stylesheet" href="./index.css">
 
-    <title>Doc-Dinamyc-Table</title>
+    <title>PoC-Dinamyc-Table</title>
 </head>
 <body>
-    <div>
-        <table class="table-container">
-            <tr class="table-tittle"> 
-                <th>Value</th>
-            </tr>
-            <tr class="table-content">
-                <td><input type="text" id="info"></td>
-            </tr>
-        </table>
+    <table class="table-container">
+        <tr class="table-tittle"> 
+            <th>Value</th>
+        </tr>
+        <tr class="table-content">
+            <td><input type="text" id="info" value=""></td>
+        </tr>
+    </table>
 
-        <div class="button-container">
-            <button id="buttom" class="save" onclick="clickMe()">Click me!</button>
-        </div>
-        
-        <table class="value-container">
-            <tr class="info-container">
-
-            </tr>
-        </table>
-    </div>  
+    <div class="button-container">
+        <button id="buttom" class="save" onclick="clickMe()">Click me!</button>
+    </div>
     
+    <div class="value-container">
+        <div class="first-column">
+            <!-- <div>Columna 1</div>
+            <div>Prueba</div> -->
+        </div>
+        <div class="second-column">
+            <!-- <div>Columna 2.1</div>
+            <div>Columna 2.2</div> -->
+        </div>
+    </div>
     <script src="./index.js"></script>
 </body>
 </html>

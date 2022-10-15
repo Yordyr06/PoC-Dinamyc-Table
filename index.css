@@ -22,10 +22,15 @@
 }
 
 .value-container {
-    display: grid;
-    place-items: center;   
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row
+
 }
 
-.info-container {
-    display: grid;
+.first-column, .second-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
