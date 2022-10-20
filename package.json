@@ -1,0 +1,22 @@
+{
+  "name": "poc-dinamyc-table",
+  "version": "1.0.0",
+  "description": "1) Tener un campo de entrada de datos\r 2) Tener un unico botón\r 3) Tener una tabla con dos columnas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yordyr06/PoC-Dinamyc-Table.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Yordy Almonte <yoalmonte.dev@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Yordyr06/PoC-Dinamyc-Table/issues"
+  },
+  "homepage": "https://github.com/Yordyr06/PoC-Dinamyc-Table#readme"
+}
